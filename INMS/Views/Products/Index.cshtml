@@ -1,0 +1,86 @@
+﻿@model IEnumerable<INMS.Models.Products>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product Index</h2>
+
+<p>
+    
+    <div class="form-group">
+        <div>
+            @Html.ActionLink("Create New", "Create", "Products", null, new { @class = "btn btn-default btn-large" })
+        </div>
+    </div>
+</p>
+<table class="table table-bordered table-hover table-dark">
+    <tr>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.partNumber)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.productLabel)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.startingInventory)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.InventoryReceived)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.InventoryShipped)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.InventoryOnHand)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.MinimumRequired)
+        </th>
+        <th scope="col">Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productLabel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.startingInventory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InventoryReceived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InventoryShipped)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InventoryOnHand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinimumRequired)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

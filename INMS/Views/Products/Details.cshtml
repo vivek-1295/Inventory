@@ -1,0 +1,82 @@
+﻿@model INMS.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.productName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productLabel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productLabel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startingInventory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startingInventory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryReceived)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventoryReceived)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryShipped)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventoryShipped)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryOnHand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventoryOnHand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinimumRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinimumRequired)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
